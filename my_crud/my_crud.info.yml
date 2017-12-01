@@ -1,0 +1,5 @@
+name: Custom module CRUD
+description: Custom module with CRUD operations
+type: module
+core: 8.x
+package: Custom

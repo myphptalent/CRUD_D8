@@ -1,0 +1,63 @@
+<?php
+
+/*
+ * Implements hook_schema().
+ *
+ */
+
+function my_crud_schema() {
+	$schema['my_crud'] = [
+	'description' => 'This table is used to CRUD.',
+		'fields' => [
+			  'id' => [
+			    'description' => 'The primary identifier for the table',
+				'type' => 'serial',
+				'not null' => TRUE,
+				 'unsigned' => TRUE,
+			   ],
+			  'fname' => [
+			    'description' => 'First name for the user',
+			     'type' => 'varchar',
+			     'length' => '40',
+			     'not null' => TRUE,
+			  ],
+			  'lname' => [
+				'description' => 'Last name for the user',
+				'type' => 'varchar',
+				'length' => '40',
+				'not null' => TRUE,
+			  ],
+			  'email' => [
+				'description' => 'Email for the user',
+				'type' => 'varchar',
+				'length' => '40',
+				'not null' => TRUE,
+			  ],
+			  'phone_number' => [
+				'description' => 'Phone number for the user',
+				'type' => 'varchar',
+				'length' => '40',
+		  	'not null' => TRUE,
+			  ],
+			  'gender' => [
+				'description' => 'Gender for the user',
+				'type' => 'varchar',
+				'length' => '40',
+			  ],
+			  'created' => [
+				'description' => 'Created date',
+				'type' => 'varchar',
+				'length' => '40',
+				'not null' => TRUE,
+			  ],
+			  'updated' => [
+				'description' => 'Updated date',
+				'type' => 'varchar',
+				'length' => '40',
+				'not null' => TRUE,
+			  ],
+		],
+		'primary key' => ['id'],
+	];
+	return $schema;
+}
