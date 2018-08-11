@@ -1,6 +1,9 @@
 <?php
+
 namespace Drupal\my_crud\Plugin\Block;
+
 use Drupal\Core\Block\BlockBase;
+
 /**
  * Provides a 'My_crudBlock' block.
  *
@@ -10,6 +13,7 @@ use Drupal\Core\Block\BlockBase;
  * )
  */
 class MycrudBlock extends BlockBase {
+
   /**
    * {@inheritdoc}
    */
@@ -17,4 +21,5 @@ class MycrudBlock extends BlockBase {
     $form = \Drupal::formBuilder()->getForm('Drupal\my_crud\Form\MycrudForm');
     return $form;
   }
+
 }
